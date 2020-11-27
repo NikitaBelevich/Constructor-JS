@@ -1,6 +1,6 @@
 'use strict';
 
-export function createTitle(textValue) {
+function createTitle(textValue) {
     return `
         <div class="row">
             <div class="col-sm">
@@ -10,7 +10,7 @@ export function createTitle(textValue) {
     `;
 }
 
-export function createText(textValue) {
+function createText(textValue) {
     return `
         <div class="row">
             <div class="col-sm">
@@ -20,7 +20,7 @@ export function createText(textValue) {
     `;
 }
 
-export function createColumns(value) {
+function createColumns(value) {
     const columns = value.map(elem => {
         return `<div class="col-sm">${elem}</div>`;
     });
@@ -31,10 +31,17 @@ export function createColumns(value) {
     `;
 }
 
-export function createImage(src) {
+function createImage(src) {
     return `
         <div class="row">
             <img src="${src}">
         </div>
     `;
 }
+
+export const creators = {
+    'title': createTitle,
+    'text': createText,
+    'columns': createColumns,
+    'image': createImage,
+};
