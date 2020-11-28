@@ -1,5 +1,30 @@
 
 body {
-    background-color: rgb(179, 179, 179);
-    
+    background-color: rgb(179, 179, 179); 
+}
+
+.header-title-row {
+    text-align: center;
+    color: #e3e3e3;
+    background: linear-gradient(to top, black, transparent);
+    padding: 15px 0;
+}
+.project-description {
+    min-height: 30vh;
+    padding: 10px;
+    background-color: rgb(242, 255, 225);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.product-col {
+    height: 100px;
+    background-color: rgb(90, 171, 238);
+
+    &:not(:last-child) {
+        margin-right: 5px;
+    }
+}
+.parcel-img {
+    max-width: 100%;
 }

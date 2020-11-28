@@ -3,20 +3,25 @@
 import {col, row} from './_utils';
 
 function createTitle(block) {
-    return row(col(`<h1>${block.value}</h1>`));
+    const {tag = 'h1', styles} = block.options;
+    return row(col(`<${tag}>${block.value}</${tag}>`), styles);
 }
 
 function createText(block) {
-    return row(col(`<p>${block.value}</p>`));
+    const {tag = 'p', styles} = block.options;
+    return row(col(`<${tag}>${block.value}</${tag}>`), styles);
 }
 
 function createColumns(block) {
-    const columns = block.value.map(elem => col(elem));
+    const {tag = 'p', styles} = block.options;
+    const columns = block.value.map(elem => col(`<${tag}>${elem}</${tag}>`, styles));
     return row(columns.join(''));
 }
 
 function createImage(block) {
-    return row(`<img src="${block.value}">`);
+    const {alt, imageStyles, parentColPadding} = block.options;
+   
+    return row(col(`<img src="${block.value}" alt="${alt}" class="${imageStyles}">`, parentColPadding));
 }
 
 export const creators = {
