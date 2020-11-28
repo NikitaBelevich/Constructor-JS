@@ -1,42 +1,22 @@
 'use strict';
 
+import {col, row} from './_utils';
+
 function createTitle(textValue) {
-    return `
-        <div class="row">
-            <div class="col-sm">
-                <h1>${textValue}</h1>
-            </div>
-        </div>
-    `;
+    return row(col(`<h1>${textValue}</h1>`));
 }
 
 function createText(textValue) {
-    return `
-        <div class="row">
-            <div class="col-sm">
-                <p>${textValue}</p>
-            </div>
-        </div>
-    `;
+    return row(col(`<p>${textValue}</p>`));
 }
 
 function createColumns(value) {
-    const columns = value.map(elem => {
-        return `<div class="col-sm">${elem}</div>`;
-    });
-    return `
-        <div class="row">
-            ${columns.join('')}
-        </div>
-    `;
+    const columns = value.map(elem => col(elem));
+    return row(columns.join(''));
 }
 
 function createImage(src) {
-    return `
-        <div class="row">
-            <img src="${src}">
-        </div>
-    `;
+    return row(`<img src="${src}">`);
 }
 
 export const creators = {

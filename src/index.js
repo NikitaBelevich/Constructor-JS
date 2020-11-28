@@ -10,8 +10,10 @@ const $site = document.querySelector('#site');
 model.forEach(block => {
     
     const creatorHTML = creators[block.type];
-
-    $site.insertAdjacentHTML('beforeend', creatorHTML(block.value));
+    if (creatorHTML) {
+       $site.insertAdjacentHTML('beforeend', creatorHTML(block.value)); 
+    }
+    
 });
 
 

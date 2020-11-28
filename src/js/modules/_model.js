@@ -1,5 +1,7 @@
 'use strict';
 
+import img1 from '../../img/img1.png'
+
 export const model = [
     {type: 'title', value: 'Hello from JS!'},
     {type: 'text', value: 'a few text'},
@@ -10,5 +12,5 @@ export const model = [
         '444',
         '555'
     ]},
-    {type: 'image', value: './img/img1.png'},
+    {type: 'image', value: img1},
 ];
