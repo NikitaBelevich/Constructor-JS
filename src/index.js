@@ -11,7 +11,7 @@ model.forEach(block => {
     
     const creatorHTML = creators[block.type];
     if (creatorHTML) {
-       $site.insertAdjacentHTML('beforeend', creatorHTML(block.value)); 
+       $site.insertAdjacentHTML('beforeend', creatorHTML(block)); 
     }
     
 });

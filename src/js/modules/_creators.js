@@ -2,21 +2,21 @@
 
 import {col, row} from './_utils';
 
-function createTitle(textValue) {
-    return row(col(`<h1>${textValue}</h1>`));
+function createTitle(block) {
+    return row(col(`<h1>${block.value}</h1>`));
 }
 
-function createText(textValue) {
-    return row(col(`<p>${textValue}</p>`));
+function createText(block) {
+    return row(col(`<p>${block.value}</p>`));
 }
 
-function createColumns(value) {
-    const columns = value.map(elem => col(elem));
+function createColumns(block) {
+    const columns = block.value.map(elem => col(elem));
     return row(columns.join(''));
 }
 
-function createImage(src) {
-    return row(`<img src="${src}">`);
+function createImage(block) {
+    return row(`<img src="${block.value}">`);
 }
 
 export const creators = {
