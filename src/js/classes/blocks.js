@@ -3,8 +3,7 @@
 import {col, row} from '../modules/_utils';
 
 export class Block {
-    constructor(type, value, options) {
-        this.type = type;
+    constructor(value, options) {
         this.value = value;
         this.options = options;
     }
@@ -16,7 +15,7 @@ export class Block {
 
 export class TitleBlock extends Block {
     constructor(value, options) {
-        super('title', value, options);
+        super(value, options);
     }
     toHTML() {
         const {tag = 'h1', styles} = this.options;
@@ -25,7 +24,7 @@ export class TitleBlock extends Block {
 }
 export class ImageBlock extends Block {
     constructor(value, options) {
-        super('image', value, options);
+        super(value, options);
     }
     toHTML() {
         const {alt, imageStyles, parentColPadding} = this.options;
@@ -34,7 +33,7 @@ export class ImageBlock extends Block {
 }
 export class TextBlock extends Block {
     constructor(value, options) {
-        super('text', value, options);
+        super(value, options);
     }
     toHTML() {
         const {tag = 'p', styles} = this.options;
@@ -43,7 +42,7 @@ export class TextBlock extends Block {
 }
 export class ColumnsBlock extends Block {
     constructor(value, options) {
-        super('columns', value, options);
+        super(value, options);
     }
     toHTML() {
         const {tag = 'p', styles} = this.options;
