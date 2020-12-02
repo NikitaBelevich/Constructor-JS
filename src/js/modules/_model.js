@@ -11,7 +11,7 @@ import {
 export const model = [
     new TitleBlock('Конструктор сайта (компонентный подход на чистом JS)', {
         tag: 'h2',
-        styles: 'header-title-row',
+        cssClassStyles: 'header-title-row',
     }),
     new ImageBlock(img1, {
         imageStyles: 'parcel-img',
@@ -20,7 +20,7 @@ export const model = [
     }),
     new TextBlock('Компонентный подход к разработке с использованием Parcel.', {
         tag: 'p',
-        styles: 'project-description',
+        cssClassStyles: 'project-description',
     }),
     new ColumnsBlock([
         'Column 1',
@@ -29,7 +29,7 @@ export const model = [
         'Column 4',
     ], {
         tag: 'p',
-        styles: 'product-col',
+        cssClassStyles: 'product-col',
     }),
     
 ];
